@@ -5,6 +5,5 @@ steps:
     name: gcr.io/cloud-builders/docker
     dir: builder
     args: [build, "--tag=gcr.io/${PROJECT_ID}/builder:${COMMIT_SHA}", .]
-    waitFor: [pull-latest]
 
 images: ["gcr.io/${PROJECT_ID}/builder:${COMMIT_SHA}"]
