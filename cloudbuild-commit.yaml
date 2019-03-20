@@ -3,7 +3,6 @@ steps:
 
   - id: build
     name: gcr.io/cloud-builders/docker
-    dir: builder
     args: [build, "--tag=gcr.io/${PROJECT_ID}/builder:${COMMIT_SHA}", .]
 
 images: ["gcr.io/${PROJECT_ID}/builder:${COMMIT_SHA}"]
